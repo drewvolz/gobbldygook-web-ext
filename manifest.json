@@ -4,12 +4,6 @@
   "version": "1.0.0",
   "description": "Adds integration between Gobbldygook and the St. Olaf SIS",
 
-  "applications": {
-    "gecko": {
-      "id": "hawkrives-gobbldygook-web-ext@gmail.com"
-    }
-  },
-
   "icons": {
     "48": "icons/48.png"
   },
