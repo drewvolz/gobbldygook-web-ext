@@ -1,0 +1,14 @@
+{
+  "name": "gobbldygook-web-ext",
+  "version": "1.0.0",
+  "description": "Web extension for Gobbldygook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@hawkrives and @drewvolz",
+  "license": "ISC",
+  "dependencies": {
+    "web-ext": "^1.4.0"
+  }
+}
