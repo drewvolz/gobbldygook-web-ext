@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Gobbldygook SIS Integration",
+  "version": "1.0.0",
+  "description": "Adds integration between Gobbldygook and the St. Olaf SIS",
+
+  "applications": {
+    "gecko": {
+      "id": "hawkrives-gobbldygook-web-ext@gmail.com"
+    }
+  },
+
+  "icons": {
+    "48": "icons/48.png"
+  },
+
+  "background": {
+    "scripts": ["background-script.js"]
+  },
+
+  "permissions": [
+    "https://www.stolaf.edu/sis",
+    "https://hawkrives.github.io/gobbldygook"
+  ]
+}
