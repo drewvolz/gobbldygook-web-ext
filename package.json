@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "A web extension for Gobbldygook",
   "main": "index.js",
+  "repository": "drewvolz/gobbldygook-web-ext",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "@hawkrives and @drewvolz",
+  "contributors": [
+    "Drew Volz",
+    "Hawken Rives <hawkrives@gmail.com>"
+  ],
   "license": "ISC",
   "dependencies": {
     "web-ext": "^1.4.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0"
   }
 }
