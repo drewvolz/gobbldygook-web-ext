@@ -1,7 +1,7 @@
 {
   "name": "gobbldygook-web-ext",
   "version": "1.0.0",
-  "description": "Web extension for Gobbldygook",
+  "description": "A web extension for Gobbldygook",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
