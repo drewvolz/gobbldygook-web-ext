@@ -1,0 +1,4 @@
+---
+env:
+  webextensions: true
+  es6: true
