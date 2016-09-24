@@ -8,9 +8,13 @@
     "48": "icons/48.png"
   },
 
-  "background": {
-    "scripts": ["background-script.js"]
-  },
+  "content_scripts": [
+    {
+      "matches": "https://hawkrives.github.io/gobbldygook/*",
+      "run_at": "document_start",
+      "js": ["content-script.js"]
+    }
+  ],
 
   "permissions": [
     "https://www.stolaf.edu/sis",
