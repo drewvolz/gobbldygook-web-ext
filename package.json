@@ -12,7 +12,7 @@
     "Drew Volz",
     "Hawken Rives <hawkrives@gmail.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "web-ext": "^1.4.0"
   },
