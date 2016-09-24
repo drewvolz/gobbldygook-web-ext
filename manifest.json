@@ -12,7 +12,9 @@
     {
       "matches": "https://hawkrives.github.io/gobbldygook/*",
       "run_at": "document_start",
-      "js": ["content-script.js"]
+      "js": [
+        "sis-fetch.js"
+      ]
     }
   ],
 
