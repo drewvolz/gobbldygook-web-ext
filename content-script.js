@@ -13,23 +13,26 @@ function getText(response) {
     return response.text()
 }
 
-function baseFetch(url) {
-    return fetch(url, {credentials: 'include'})
+function baseFetch(url, args) {
+    let baseArgs = {
+        cache: 'no-cache',
+        credentials: 'include',
+    }
+    return fetch(url, Object.assign({}, baseArgs, args))
         .then(checkStatus)
         .then(getText)
 }
 
 function getSisPage(event) {
-    baseFetch(event.data.url)
+    baseFetch(event.data.url, event.data.fetchArgs)
         .then(messagePage(event))
 }
 
 function messagePage(event) {
     return function(responseText) {
         window.postMessage({
-            from: 'script',
-            url: event.url,
-            id: event.id,
+            from: 'web-ext',
+            id: event.data.id,
             text: responseText,
         })
     }
@@ -40,10 +43,19 @@ window.addEventListener('message', function(event) {
     // {
     //    from: 'page',
     //    url: <string>,
+    //    fetchArgs: <object>,
     //    id: <uuid as string>,
     // }
     if (event.source === window && event.data.from === 'page') {
         getSisPage(event)
-            .catch(console.error.bind(console))
+            .catch(function(err) {
+                console.error(err)
+
+                window.postMessage({
+                    from: 'web-ext',
+                    id: event.data.id,
+                    error: JSON.stringify(err),
+                })
+            })
     }
 })
