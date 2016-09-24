@@ -1,0 +1,11 @@
+# language: node_js
+# node_js:
+#   - 'node'
+# env:
+#   - EXTENSION_ID=nhhpgddphdimipafjfiggjnbbmcoklld
+# deploy:
+#   provider: script
+#   script: npm run r:chrome
+#   on:
+#     branch: master
+#     tags: true
