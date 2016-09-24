@@ -24,7 +24,7 @@ function baseFetch(url, args) {
 }
 
 function getSisPage(event) {
-    baseFetch(event.data.url, event.data.fetchArgs)
+    return baseFetch(event.data.url, event.data.fetchArgs)
         .then(messagePage(event))
 }
 
