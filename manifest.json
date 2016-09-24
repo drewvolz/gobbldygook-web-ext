@@ -13,8 +13,14 @@
       "matches": ["https://hawkrives.github.io/gobbldygook/*"],
       "run_at": "document_start",
       "js": [
-        "inject-ext-version.js",
         "sis-fetch.js"
+      ]
+    },
+    {
+      "matches": ["https://hawkrives.github.io/gobbldygook/*"],
+      "run_at": "document_end",
+      "js": [
+        "inject-ext-version.js"
       ]
     }
   ],
