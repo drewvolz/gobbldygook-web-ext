@@ -10,7 +10,7 @@
 
   "content_scripts": [
     {
-      "matches": "https://hawkrives.github.io/gobbldygook/*",
+      "matches": ["https://hawkrives.github.io/gobbldygook/*"],
       "run_at": "document_start",
       "js": [
         "sis-fetch.js"
