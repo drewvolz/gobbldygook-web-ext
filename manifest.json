@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Gobbldygook SIS Integration",
+  "short_name": "Gobbldygook",
   "version": "1.0.0",
   "description": "Adds integration between Gobbldygook and the St. Olaf SIS",
 
