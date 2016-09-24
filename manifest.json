@@ -6,7 +6,9 @@
   "description": "Adds integration between Gobbldygook and the St. Olaf SIS",
 
   "icons": {
-    "48": "icons/48.png"
+    "16": "icon_16@2x.png",
+    "48": "icon_48@2x.png",
+    "128": "icon_128@2x.png"
   },
 
   "content_scripts": [
