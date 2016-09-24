@@ -34,7 +34,7 @@ function messagePage(event) {
             from: 'web-ext',
             id: event.data.id,
             text: responseText,
-        })
+        }, '*')
     }
 }
 
