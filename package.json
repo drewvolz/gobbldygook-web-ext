@@ -4,7 +4,7 @@
   "description": "A web extension for Gobbldygook",
   "repository": "hawkrives/gobbldygook-web-ext",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "zip": "rm -f chrome-build.zip && zip chrome-build.zip icon_*.png *.js manifest.json",
     "release": "npm run zip && webstore upload --source=extension --auto-publish --extension-id nhhpgddphdimipafjfiggjnbbmcoklld --source chrome-build.zip",
     "web-ext": "web-ext"
