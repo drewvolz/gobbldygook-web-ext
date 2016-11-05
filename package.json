@@ -16,6 +16,6 @@
   "license": "MIT",
   "devDependencies": {
     "chrome-webstore-upload-cli": "1.1.0",
-    "web-ext": "1.4.0"
+    "web-ext": "^1.6.0"
   }
 }
