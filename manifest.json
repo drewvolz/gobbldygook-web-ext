@@ -6,7 +6,7 @@
   "name": "Gobbldygook SIS Integration",
   "short_name": "Gobbldygook",
   "author": "Hawken Rives",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Adds integration between Gobbldygook and the St. Olaf SIS",
 
   "icons": {
