@@ -3,6 +3,8 @@ A web extension for Gobbldygook
 
 ## Developing
 
+You'll likely want to edit the `manifest.json` file and add `"http://localhost/*"` to each `content_scripts`'s `matches` entry, as well as the `permissions` key, in order to allow the extension to run on a local copy of Gobbldygook.
+
 ###### For Firefox
 - Install [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - Find the path to the `firefox-bin` executable. On OS X, it's inside the application bundle, at `/Contents/MacOS/firefox-bin`. I don't know about Windows.
