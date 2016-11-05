@@ -9,22 +9,37 @@ function checkStatus(response) {
     }
 }
 
+function buildFormData(obj) {
+    var formData = new FormData()
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            formData.append(key, obj[key])
+        }
+    }
+    return formData
+}
+
 function getText(response) {
     return response.text()
 }
 
-function baseFetch(url, args) {
-    let baseArgs = {
+function baseFetch(url, args, body) {
+    var baseArgs = {
         cache: 'no-cache',
         credentials: 'include',
     }
+
+    if (body) {
+        args.body = buildFormData(body)
+    }
+
     return fetch(url, Object.assign({}, baseArgs, args))
         .then(checkStatus)
         .then(getText)
 }
 
 function getSisPage(event) {
-    return baseFetch(event.data.url, event.data.fetchArgs)
+    return baseFetch(event.data.url, event.data.fetchArgs, event.data.fetchBody)
         .then(messagePage(event))
 }
 
@@ -43,7 +58,8 @@ window.addEventListener('message', function(event) {
     // {
     //    from: 'page',
     //    url: <string>,
-    //    fetchArgs: <object>,
+    //    fetchArgs?: <object>,
+    //    fetchBody?: <object>,
     //    id: <uuid as string>,
     // }
     if (event.source === window && event.data.from === 'page') {
